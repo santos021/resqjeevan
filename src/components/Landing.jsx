@@ -20,18 +20,10 @@ const Landing = () => {
   };
   return (
     <div>
-      <div className="flex justify-between items-center bg-[#232D3F] h-[80px]">
-        <Image src={"/g20.png"} alt="img" width={100} height={100} />
-        <h2 className="text-white text-[50px]">
-          <Link href="/">ResQjeevan</Link>
-        </h2>
-        <Image src={"/Emb.png"} alt="img" width={50} height={50} />
-      </div>
-
       <div className="flex justify-around bg-[#80B3FF]">
         <ul className="list-none flex p-2 m-2 ">
           <li className="pr-[80px] ">
-            <h2>
+            <h2 className="text-[18px] font-bold">
               <Link href="/">Home</Link>{" "}
             </h2>
           </li>
@@ -46,14 +38,14 @@ const Landing = () => {
             </h2>
           </li> */}
         </ul>
-        <div>
-          <button
-            className="bg-blue-500 text-white px-4 py-2 m-2 rounded"
-            onClick={toggleDropdown}
+        <div className="ml-[40px] border-2 border-black">
+          <Link
+            className="bg-blue-500 text-[18px] text-white px-4 py-2 m-2 rounded-lg"
+            href={"/signup"}
           >
             Register
-          </button>
-          {isDropdownOpen && (
+          </Link>
+          {/* {isDropdownOpen && (
             <div className="absolute bg-yellow-300 text-black p-3 rounded-md shadow-md">
               <a
                 href="/signup"
@@ -70,10 +62,10 @@ const Landing = () => {
                 General Client
               </a>
             </div>
-          )}
+          )} */}
 
-          <button className="bg-green-500 text-white px-4 py-2 m-2 rounded">
-          <Link href="/login">Login</Link>
+          <button className="bg-green-500 text-[18px] text-white px-4 py-2 m-2 rounded-lg">
+            <Link href="/login">Login</Link>
           </button>
         </div>
       </div>
@@ -81,104 +73,64 @@ const Landing = () => {
       <div className="flex justify-between  border-2 border-white">
         <div className="">
           <h1 className="bg-[#FFECD6] text-black font-medium text-[17px] text-center">
-            Current Disaster News
+            Disaster News
           </h1>
           <div className=" bg-white text-black overflow-y-auto h-[386px] p-3">
             <h3 className="bg-[#D5E6EF] text-black text-[15px]">
-              Lorem ipsum dolor sit amet consectetur
+              Cyclone Tauktae (May 2021):
             </h3>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore
-              minus veniam ex.
+              Cyclone Tauktae hit the western coast of India, causing widespread
+              damage in states like Gujarat and Maharashtra. Heavy rainfall,
+              strong winds, and storm surges led to casualties and
+              infrastructure damage.
             </p>
             <h3 className="bg-[#D5E6EF] text-black text-[15px]">
-              Lorem ipsum dolor sit amet consectetur
+              COVID-19 Pandemic (ongoing):
             </h3>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore
-              minus veniam ex.
+              India, like the rest of the world, has been dealing with the
+              global COVID-19 pandemic. The country has faced challenges related
+              to healthcare infrastructure, vaccination distribution, and
+              managing the spread of the virus.
             </p>
             <h3 className="bg-[#D5E6EF] text-black text-[15px]">
-              Lorem ipsum dolor sit amet consectetur
+              Floods in Uttarakhand (February 2021):{" "}
             </h3>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore
-              minus veniam ex.
+              Flash floods occurred in the Chamoli district of Uttarakhand due
+              to a glacier burst, leading to the destruction of bridges, roads,
+              and hydroelectric projects. Many lives were lost, and several were
+              reported missing.
             </p>
             <h3 className="bg-[#D5E6EF] text-black text-[15px]">
-              Lorem ipsum dolor sit amet consectetur
+              Cyclone Amphan (May 2020):{" "}
             </h3>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore
-              minus veniam ex.
+              Cyclone Amphan struck the Bay of Bengal and affected West Bengal
+              and Bangladesh. It was one of the strongest cyclones in the
+              region, causing extensive damage to infrastructure, agriculture,
+              and human settlements.
             </p>
             <h3 className="bg-[#D5E6EF] text-black text-[15px]">
-              Lorem ipsum dolor sit amet consectetur
+              Locust Attacks (2020):
             </h3>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore
-              minus veniam ex.
+              Several states in India experienced severe locust attacks,
+              affecting crops and posing a threat to agricultural livelihoods.
             </p>
             <h3 className="bg-[#D5E6EF] text-black text-[15px]">
-              Lorem ipsum dolor sit amet consectetur
+              Assam Floods (annual occurrence):
             </h3>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore
-              minus veniam ex.
-            </p>
-            <h3 className="bg-[#D5E6EF] text-black text-[15px]">
-              Lorem ipsum dolor sit amet consectetur
-            </h3>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore
-              minus veniam ex.
-            </p>
-            <h3 className="bg-[#D5E6EF] text-black text-[15px]">
-              Lorem ipsum dolor sit amet consectetur
-            </h3>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore
-              minus veniam ex.
-            </p>
-            <h3 className="bg-[#D5E6EF] text-black text-[15px]">
-              Lorem ipsum dolor sit amet consectetur
-            </h3>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore
-              minus veniam ex.
-            </p>
-            <h3 className="bg-[#D5E6EF] text-black text-[15px]">
-              Lorem ipsum dolor sit amet consectetur
-            </h3>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore
-              minus veniam ex.
-            </p>
-            <h3 className="bg-[#D5E6EF] text-black text-[15px]">
-              Lorem ipsum dolor sit amet consectetur
-            </h3>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore
-              minus veniam ex.
-            </p>
-            <h3 className="bg-[#D5E6EF] text-black text-[15px]">
-              Lorem ipsum dolor sit amet consectetur
-            </h3>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore
-              minus veniam ex.
-            </p>
-            <h3 className="bg-[#D5E6EF] text-black text-[15px]">
-              Lorem ipsum dolor sit amet consectetur
-            </h3>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore
-              minus veniam ex.
+              The state of Assam faces annual floods during the monsoon season,
+              causing widespread inundation, displacement of people, and damage
+              to crops and infrastructure.
             </p>
           </div>
         </div>
         <div>
-          <Image src={"/image-4.jpeg"} alt="img" width={930} height={500} />
+          <Image src={"/image-4.jpeg"} alt="img" width={1900} height={500} />
         </div>
         <div className="">
           <h1 className="bg-[#FFECD6] text-red-500 text-[17px] font-medium text-center">
@@ -186,53 +138,53 @@ const Landing = () => {
           </h1>
           <div className="p-3 bg-white text-black overflow-y-auto h-[386px]">
             <h3 className="bg-[#D5E6EF] text-black text-[15px]">
-              Lorem ipsum dolor sit amet consectetur
+              Earthquake Alert
             </h3>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore
-              minus veniam ex.
+              Warning: A seismic event has occurred. Stay indoors, take cover,
+              and be prepared for aftershocks.
             </p>
             <h3 className="bg-[#D5E6EF] text-black text-[15px]">
-              Lorem ipsum dolor sit amet consectetur
+              Hurricane Warning
             </h3>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore
-              minus veniam ex.
+              Attention: A hurricane is approaching. Follow evacuation orders
+              and seek shelter immediately.
             </p>
             <h3 className="bg-[#D5E6EF] text-black text-[15px]">
-              Lorem ipsum dolor sit amet consectetur
+              Flood Advisory
             </h3>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore
-              minus veniam ex.
+              Alert: Heavy rainfall may lead to flooding. Move to higher ground
+              and avoid flooded areas
             </p>
             <h3 className="bg-[#D5E6EF] text-black text-[15px]">
-              Lorem ipsum dolor sit amet consectetur
+              Wildfire Alert
             </h3>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore
-              minus veniam ex.
+              Caution: Wildfire in the area. Evacuate if instructed, and follow
+              emergency routes.
             </p>
             <h3 className="bg-[#D5E6EF] text-black text-[15px]">
-              Lorem ipsum dolor sit amet consectetur
+              Tsunami Warning
             </h3>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore
-              minus veniam ex.
+              Urgent: Tsunami threat detected. Move to higher ground away from
+              the coast
             </p>
             <h3 className="bg-[#D5E6EF] text-black text-[15px]">
-              Lorem ipsum dolor sit amet consectetur
+              Volcanic Activity Notice{" "}
             </h3>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore
-              minus veniam ex.
+              Volcanic activity detected. Follow evacuation orders and stay
+              informed about ashfall risks
             </p>
             <h3 className="bg-[#D5E6EF] text-black text-[15px]">
-              Lorem ipsum dolor sit amet consectetur
+              Space Weather Warning
             </h3>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore
-              minus veniam ex.
+              Space weather alert: Solar storm expected. Monitor communications
+              and be prepared for potential disruptions.
             </p>
           </div>
         </div>

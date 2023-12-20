@@ -1,11 +1,10 @@
-import React from 'react'
+import TeamPage from '@/components/TeamPage'
+import Image from 'next/image'
 
-const page = () => {
+export default function Home() {
   return (
-    <div>
-      <h1>Hello</h1>
-    </div>
+    <main className="">
+      <TeamPage />
+    </main>
   )
 }
-
-export default page

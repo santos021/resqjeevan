@@ -8,11 +8,9 @@ import { useRouter } from "next/navigation";
 function page() {
   const router = useRouter();
   const [value, setValue] = useState({
-    licenseNo: "",
+    teamID: "",
     password: "",
   });
-
-
   const [status, setStatus] = useState(null);
   const [loading, setLoading] = useState(false);
 
@@ -28,13 +26,13 @@ function page() {
 
     try {
         setLoading(true);
-      const res = await fetch("http://11.0.101.244:8080/api/org/authenticate", {
+      const res = await fetch("http://11.0.101.244:8080/api/team/authenticate", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          licenseNo: value.licenseNo,
+          teamID: value.teamID,
           password:value.password,
           }),
       });
@@ -45,9 +43,9 @@ function page() {
       
 
       if (res.status === 200) {
-        Cookies.set('cookies', cookie, { expires: 7 })
+        Cookies.set('teamcookies', cookie, { expires: 7 })
         setValue({
-          licenseNo: "",
+          teamID: "",
           password: "",
 
         });
@@ -72,18 +70,18 @@ function page() {
 
       <div className="bg-[#DFF9EE] h-[500px] w-[450px] rounded-lg shadow-md shadow-slate-900 flex flex-col p-8">
         <h1 className="mt-3 text-2xl text-center pr-[20px] text-[#3688F3]">
-          Login
+          Team Login
         </h1>
         <form className="mt-5" onSubmit={handleSubmit}>
             <div className="mt-2 flex flex-col w-[180px]">
               <label htmlFor="License No" className="text-[15px]">
-                License No:
+                Team ID:
               </label>
               <input
                 type="number"
-                name="licenseNo"
+                name="tmID"
                 placeholder="Enter your license No: "
-                value={value.licenseNo}
+                value={value.teamID}
                 onChange={handleChange}
                 className="border-b-2 border-[#65D5FA] bg-[#DFF9EE] outline-none p-2 text-[12px] text-black"
                 required
@@ -111,6 +109,12 @@ function page() {
               Submit
             </button>
           </div>
+          {status === "failed" && (
+            <h1 className="text-red-600">Invalid Credentials</h1>
+          )}
+          {status === "success" && (
+            <h1 className="text-green-600">Login Successful</h1>
+          )}
         </form>
       </div>
     </main>
