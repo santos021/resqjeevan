@@ -28,26 +28,13 @@ const Main = () => {
 
   return (
     <div className="px-[25px] pt-[25px] bg-[#F8F9FC] pb-[40px]">
-      <div className="flex items-center justify-between">
-        <h1 className="text-[28px] leading-[34px] font-normal text-[#5a5c69] cursor-pointer">
-          Dashboard
-        </h1>
-
-        <div className="flex justify-between w-[300px] m-2">
-          <button className="bg-[#2E59D9] h-[35px] rounded-[3px] text-white flex items-center justify-center px-[8px]">
-            Generate Report
-          </button>
-          <button className="bg-[#35ac5d] h-[35px] rounded-[3px] text-white flex items-center justify-center px-[35px]">
-            Request
-          </button>
-        </div>
-      </div>
+      
 
       <div className="flex mt-[22px] w-full gap-[30px]">
         <div className="basis-[100%] border bg-white shadow-md rounded-[4px]">
           <div className="bg-[#F8F9FC] flex items-center justify-between py-[15px] px-[20px] border-b-[1px] border-[#EDEDED] mb-[20px]">
             <h2 className="text-[#4e73df] text-[16px] leading-[19px] font-bold">
-              Team Details
+              Organisation Help Request
             </h2>
           </div>
           <div>
